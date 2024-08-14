@@ -1,0 +1,233 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.header {
+  background-color: black;
+  background-color: rgb(227, 225, 225);
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem;
+  height: 5rem;
+
+  &__nav {
+    display: flex;
+    height: 100%;
+
+    &-list {
+      list-style: none;
+      display: flex;
+      gap: 10%;
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+
+      &-item {
+        width: 8rem;
+
+        &:hover {
+          border-bottom: 0.3rem solid green;
+        }
+
+        & a {
+          display: flex;
+          width: 100%;
+          height: 100%;
+          color: white;
+          color: black;
+          justify-content: center;
+          align-items: center;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  &__hero-logo {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    color: white;
+    justify-content: end;
+    align-items: center;
+    text-decoration: none;
+  }
+}
+
+.main {
+    background-color: #3792cb;
+    background-color: rgb(227, 225, 225);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__recommend-title {
+        margin: 1.5rem 0 0;
+        font-size: 3rem;
+    }
+
+    &__movies-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__movie-card {
+        background-color: white;
+        height: 25rem;
+        width: 15rem;
+        margin: 2rem;
+        border-radius: 1.5rem;
+        display: flex;
+        flex-direction: column;
+
+        &:nth-of-type(2) {
+            height: 28rem;
+            width: 18rem;
+        }
+
+        &-poster {
+            margin: 0;
+            display: flex;
+            place-content: center;
+            border-radius: inherit;
+            overflow: hidden;
+            margin: 0.8rem;
+
+            & img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        &-title {
+            margin: 0 0 1rem;
+            text-align: center;
+        }
+
+        &-details {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 1.5rem;
+
+            & li {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                & p {
+                    margin: 0;
+
+                    &:first-of-type {
+                        font-weight: 700;
+                        color: grey;
+                        margin-bottom: 0.5rem;
+                    }
+                }
+            }
+        }
+    }
+
+    &__movies-expand-container {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      background-color: lightblue;
+    }
+
+    &__movie-details {
+      display: flex;
+      justify-content: center;
+
+      &:nth-of-type(even) {
+        background-color: lightcyan;
+      }
+
+      &:nth-of-type(2) {
+        & div:first-of-type {
+          order: 2;
+        }
+
+        & div:nth-of-type(2) {
+          order: 0;
+        }
+
+        & div:last-of-type {
+          order: -1;
+        }
+      }
+
+      & div {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:first-of-type {
+          display: flex;
+          flex-direction: column;
+          
+          & p {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            font-weight: 700;
+            margin: 0.5rem;
+            align-items: center;
+
+            & span {
+              margin-left: 1%;
+              font-weight: 400;
+            }
+          }
+        }
+
+        &:nth-of-type(2) {
+          & p {
+            display: flex;
+            flex-direction: column;
+            margin-top: 1rem;
+            font-weight: 700;
+
+            & span {
+              margin: 2rem 0;
+              font-weight: 400;
+            }
+          }
+        }
+
+        &:last-of-type {
+          position: relative;
+
+          & img {
+            height: 15rem;
+            margin: 1rem;
+          }
+        }
+      }
+    }
+}
+
+.footer {
+    & .logos {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    &__contact-list {
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+

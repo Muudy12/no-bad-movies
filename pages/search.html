@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Movie</title>
+    <link rel="stylesheet" href="../scss/recommend.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li class="header__nav-list-item"><a href="/">Recommend</a></li>
+          <li class="header__nav-list-item">
+            <a href="./search.html">Search Page</a>
+          </li>
+        </ul>
+      </nav>
+
+      <a class="header__hero-logo" href="/"
+        ><img
+          src="../assets/logos/banner-logo.png"
+          alt="logo banner image"
+          width="200"
+      /></a>
+    </header>
+
+    <main class="main">
+      <form class="form">
+        <input
+          type="textarea"
+          class="search"
+          placeholder="your movie title here"
+        />
+        <button type="submit">search</button>
+      </form>
+
+      <h1 class="main__recommend-title">Your Movie</h1>
+      <section class="main__movies-container">
+        <article class="main__movie-card"></article>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <ul class="footer__contact-list">
+        <li>
+          <h4>Mu Dah</h4>
+          <p>dahmu24@gmail.com</p>
+          <p>
+            <a href="https://linkedin.com/"
+              ><img
+                class="logos"
+                src="../assets/logos/linkedin-logo.png"
+                alt="linkedin logo picture"
+            /></a>
+          </p>
+        </li>
+        <li>
+          <h4>Zanab Jafry Shah</h4>
+          <p>zanab@protonmail.com</p>
+          <p>
+            <a href="https://linkedin.com/"
+              ><img
+                class="logos"
+                src="../assets/logos/linkedin-logo.png"
+                alt="linkedin logo picture"
+            /></a>
+          </p>
+        </li>
+        <li>
+          <h4>Darvy Yu</h4>
+          <p>thedarvy@gmail.com</p>
+          <p>
+            <a href="https://linkedin.com/"
+              ><img
+                class="logos"
+                src="../assets/logos/linkedin-logo.png"
+                alt="linkedin logo picture"
+            /></a>
+          </p>
+        </li>
+      </ul>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+    <script src="../scripts/search.js"></script>
+  </body>
+</html>
