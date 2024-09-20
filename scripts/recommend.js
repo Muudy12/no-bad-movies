@@ -74,7 +74,7 @@ const currentPath = document.location.pathname;
 
 switch (currentPath) {
   case "/":
-    document.querySelector(".recommend").classList.add("active");
+    document.querySelector(".recommend-page").classList.add("active");
     break;
   default:
     break;

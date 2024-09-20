@@ -3,7 +3,6 @@ const BaseUrlForMovie =
 
 async function getMovie() {
   const searchValue = document.querySelector(".search").value;
-  console.log(searchValue);
   const movieResult = await axios.get(`${BaseUrlForMovie}${searchValue}`);
   return movieResult;
 }
@@ -34,12 +33,9 @@ function appendMovieCard(movie) {
   footer.append(movieTitle);
   footer.append(imDbRating);
   mainMovieCard.append(footer);
-  console.log(movie);
-  console.log(mainMovieCard);
   moviePoster.src = movie.data.Poster;
   movieTitle.innerText = movie.data.Title;
   imDbRating.innerText = movie.data.imdbRating;
-  console.log(movie.data.imdbRating);
   if (movie.data.imdbRating < 5) {
     const badMovie = document.querySelector(".main__recommend-title");
     badMovie.innerHTML = "Your movie is BAD";
@@ -53,11 +49,10 @@ function appendMovieCard(movie) {
 
 let currentPath = document.location.pathname.split("/").filter(p => p !== '');
 currentPath = currentPath[currentPath.length - 1];
-console.log(currentPath);
 
 switch (currentPath) {
   case "search.html":
-    document.querySelector(".search").classList.add("active");
+    document.querySelector(".search-page").classList.add("active");
     break;
   default:
     break;
