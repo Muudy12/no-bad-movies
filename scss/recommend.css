@@ -2,17 +2,23 @@ html,
 body {
   margin: 0;
   padding: 0;
-  width: 100%;
-  height: 100%;
 }
 
 .header {
   background-color: black;
   background-color: rgb(227, 225, 225);
   display: flex;
-  justify-content: space-between;
   padding: 0 2rem;
   height: 5rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 768px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 .header__nav {
   display: flex;
@@ -48,9 +54,16 @@ body {
   width: 100%;
   height: 100%;
   color: white;
-  justify-content: end;
+  justify-content: center;
   align-items: center;
   text-decoration: none;
+  order: -1;
+}
+@media (min-width: 768px) {
+  .header__hero-logo {
+    justify-content: end;
+    order: 0;
+  }
 }
 
 .main {
@@ -62,12 +75,24 @@ body {
 }
 .main__recommend-title {
   margin: 1.5rem 0 0;
-  font-size: 3rem;
+  font-size: 1.8rem;
+}
+@media (min-width: 768px) {
+  .main__recommend-title {
+    font-size: 3rem;
+  }
 }
 .main__movies-container {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .main__movies-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 .main__movie-card {
   background-color: white;
@@ -184,10 +209,80 @@ body {
 
 .footer .logos {
   width: 2rem;
-  height: 2rem;
 }
 .footer__contact-list {
   list-style: none;
   display: flex;
   justify-content: space-around;
+  padding: 0;
+  flex-wrap: wrap;
+}
+.footer li {
+  box-sizing: border-box;
+  padding: 0.5rem;
+}
+.footer li p {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .footer li p {
+    flex-direction: row;
+  }
+}
+
+.mail-logo {
+  width: 2rem;
+}
+
+.form {
+  background-color: yellow;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 1rem;
+  gap: 1rem;
+  border-radius: 0.25rem;
+  overflow: hidden;
+  width: 50%;
+}
+@media (min-width: 768px) {
+  .form {
+    width: 20rem;
+  }
+}
+.form input {
+  height: 2rem;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  padding: 0.3rem;
+  outline: none;
+  border: none;
+  border-radius: inherit;
+  width: 100%;
+}
+.form input:focus {
+  border: 0.14rem solid lightblue;
+}
+.form input:focus::-moz-placeholder {
+  opacity: 0;
+}
+.form input:focus::placeholder {
+  opacity: 0;
+}
+.form button {
+  width: 100%;
+  height: 2rem;
+  border: none;
+  outline: none;
+  border-radius: inherit;
+  background-color: lightblue;
+}
+.form button:active {
+  color: white;
+  background-color: lightseagreen;
 }/*# sourceMappingURL=recommend.css.map */
