@@ -59,10 +59,10 @@ function appendMovieCard(movie) {
   }
 }
 
-let currentPath = document.location.pathname.split("/").filter((p) => p !== "");
-currentPath = currentPath[currentPath.length - 1];
+let currentPathSearch = document.location.pathname.split("/").filter((p) => p !== "");
+currentPathSearch = currentPathSearch[currentPathSearch.length - 1];
 
-switch (currentPath) {
+switch (currentPathSearch) {
   case "search.html":
     document.querySelector(".search-page").classList.add("active");
     break;

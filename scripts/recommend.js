@@ -70,9 +70,9 @@ function appendMovieCard(movie) {
   moviesContainer.appendChild(article);
 }
 
-const currentPath = document.location.pathname;
+let currentPathRecommend = document.location.pathname;
 
-switch (currentPath) {
+switch (currentPathRecommend) {
   case "/":
     document.querySelector(".recommend-page").classList.add("active");
     break;
