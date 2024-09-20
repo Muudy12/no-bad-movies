@@ -16,12 +16,32 @@ body {
   padding: 0;
 }
 
+.mu-port {
+  order: -2;
+  height: 2rem;
+
+  @include tablet {
+    order: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  & img {
+    width: 3rem;
+
+    @include tablet {
+      margin-right: 1rem;
+    }
+  }
+}
+
 .header {
   background-color: black;
   background-color: rgb(227, 225, 225);
   display: flex;
   padding: 0 2rem;
-  height: 5rem;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -29,6 +49,7 @@ body {
   @include tablet {
     flex-direction: row;
     justify-content: space-between;
+    height: 5rem;
   }
 
   &__nav {
@@ -47,7 +68,8 @@ body {
       &-item {
         width: 8rem;
 
-        &:hover {
+        &:hover,
+        &.active {
           border-bottom: 0.3rem solid green;
         }
 
@@ -55,11 +77,14 @@ body {
           display: flex;
           width: 100%;
           height: 100%;
-          color: white;
           color: black;
           justify-content: center;
           align-items: center;
           text-decoration: none;
+
+          &:hover {
+            font-weight: 700;
+          }
         }
       }
     }
@@ -285,7 +310,6 @@ body {
 }
 
 .form {
-  background-color: yellow;
   box-sizing: border-box;
   display: flex;
   align-items: center;
@@ -311,6 +335,12 @@ body {
     border-radius: inherit;
     width: 100%;
 
+    @include tablet {
+      height: 3rem;
+      padding: 0.8rem;
+      font-size: 1rem;
+    }
+
     &:focus {
       border: 0.14rem solid lightblue;
 
@@ -327,6 +357,13 @@ body {
     outline: none;
     border-radius: inherit;
     background-color: lightblue;
+    cursor: pointer;
+    font-weight: 700;
+
+    @include tablet {
+      height: 3rem;
+      font-size: 1.5rem;
+    }
 
     &:active {
       color: white;

@@ -5,7 +5,6 @@ async function getMovie() {
   const searchValue = document.querySelector(".search").value;
   console.log(searchValue);
   const movieResult = await axios.get(`${BaseUrlForMovie}${searchValue}`);
-  console.log(movieResult.data);
   return movieResult;
 }
 
@@ -50,4 +49,16 @@ function appendMovieCard(movie) {
     badMovie.innerHTML = "Your movie is GOOD :)";
     badMovie.style.color = "green";
   }
+}
+
+let currentPath = document.location.pathname.split("/").filter(p => p !== '');
+currentPath = currentPath[currentPath.length - 1];
+console.log(currentPath);
+
+switch (currentPath) {
+  case "search.html":
+    document.querySelector(".search").classList.add("active");
+    break;
+  default:
+    break;
 }

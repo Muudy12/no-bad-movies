@@ -4,12 +4,33 @@ body {
   padding: 0;
 }
 
+.mu-port {
+  order: -2;
+  height: 2rem;
+}
+@media (min-width: 768px) {
+  .mu-port {
+    order: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.mu-port img {
+  width: 3rem;
+}
+@media (min-width: 768px) {
+  .mu-port img {
+    margin-right: 1rem;
+  }
+}
+
 .header {
   background-color: black;
   background-color: rgb(227, 225, 225);
   display: flex;
   padding: 0 2rem;
-  height: 5rem;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -18,6 +39,7 @@ body {
   .header {
     flex-direction: row;
     justify-content: space-between;
+    height: 5rem;
   }
 }
 .header__nav {
@@ -36,18 +58,20 @@ body {
 .header__nav-list-item {
   width: 8rem;
 }
-.header__nav-list-item:hover {
+.header__nav-list-item:hover, .header__nav-list-item.active {
   border-bottom: 0.3rem solid green;
 }
 .header__nav-list-item a {
   display: flex;
   width: 100%;
   height: 100%;
-  color: white;
   color: black;
   justify-content: center;
   align-items: center;
   text-decoration: none;
+}
+.header__nav-list-item a:hover {
+  font-weight: 700;
 }
 .header__hero-logo {
   display: flex;
@@ -238,7 +262,6 @@ body {
 }
 
 .form {
-  background-color: yellow;
   box-sizing: border-box;
   display: flex;
   align-items: center;
@@ -265,6 +288,13 @@ body {
   border-radius: inherit;
   width: 100%;
 }
+@media (min-width: 768px) {
+  .form input {
+    height: 3rem;
+    padding: 0.8rem;
+    font-size: 1rem;
+  }
+}
 .form input:focus {
   border: 0.14rem solid lightblue;
 }
@@ -281,6 +311,14 @@ body {
   outline: none;
   border-radius: inherit;
   background-color: lightblue;
+  cursor: pointer;
+  font-weight: 700;
+}
+@media (min-width: 768px) {
+  .form button {
+    height: 3rem;
+    font-size: 1.5rem;
+  }
 }
 .form button:active {
   color: white;

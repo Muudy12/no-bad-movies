@@ -4,7 +4,9 @@ async function getRecommendedMovies() {
   const theNoteBook = await axios.get(`${muBaseUrlForMovie}The Notebook`);
   appendMovieCard(theNoteBook.data);
 
-  const shawshankRedemption = await axios.get(`${muBaseUrlForMovie}shawshank redemption`);
+  const shawshankRedemption = await axios.get(
+    `${muBaseUrlForMovie}shawshank redemption`
+  );
   appendMovieCard(shawshankRedemption.data);
 
   const enemy = await axios.get(`${muBaseUrlForMovie}enemy`);
@@ -66,4 +68,14 @@ function appendMovieCard(movie) {
 
   const moviesContainer = document.querySelector(".main__movies-container");
   moviesContainer.appendChild(article);
+}
+
+const currentPath = document.location.pathname;
+
+switch (currentPath) {
+  case "/":
+    document.querySelector(".recommend").classList.add("active");
+    break;
+  default:
+    break;
 }
