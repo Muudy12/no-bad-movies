@@ -3,8 +3,15 @@ const BaseUrlForMovie =
 
 async function getMovie() {
   const searchValue = document.querySelector(".search").value;
-  const movieResult = await axios.get(`${BaseUrlForMovie}${searchValue}`);
-  return movieResult;
+  let movie = null;
+  if (searchValue) {
+    const movieResult = await axios.get(`${BaseUrlForMovie}${searchValue}`);
+    if (movieResult.data.Response === "True") {
+      movie = movieResult;
+    }
+  }
+
+  return movie;
 }
 
 let form = document.getElementsByClassName("form")[0];
@@ -12,7 +19,12 @@ let form = document.getElementsByClassName("form")[0];
 form.addEventListener("submit", async (event) => {
   event.preventDefault();
   const movie = await getMovie();
-  appendMovieCard(movie);
+
+  if (movie) {
+    appendMovieCard(movie);
+  }
+
+  event.target.search.value = "";
 });
 
 getMovie();
@@ -47,7 +59,7 @@ function appendMovieCard(movie) {
   }
 }
 
-let currentPath = document.location.pathname.split("/").filter(p => p !== '');
+let currentPath = document.location.pathname.split("/").filter((p) => p !== "");
 currentPath = currentPath[currentPath.length - 1];
 
 switch (currentPath) {
