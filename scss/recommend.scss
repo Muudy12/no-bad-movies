@@ -315,7 +315,11 @@ main {
 
 .footer {
   & .logos {
-    width: 2rem;
+    width: 1.5rem;
+
+    @include tablet {
+      width: 1.8rem;
+    }
   }
 
   &__contact-list {
@@ -330,21 +334,30 @@ main {
     box-sizing: border-box;
     padding: 0.5rem;
 
+    & h4 {
+      margin: 0.5rem 0;
+    }
+
     & p {
       display: flex;
       align-items: center;
       gap: 1rem;
       flex-direction: column;
+      margin: 0;
 
       @include tablet {
         flex-direction: row;
+        justify-content: center;
+      }
+
+      & a {
+        height: fit-content;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
     }
   }
-}
-
-.mail-logo {
-  width: 2rem;
 }
 
 .form {

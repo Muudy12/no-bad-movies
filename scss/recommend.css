@@ -271,7 +271,12 @@ main {
 }
 
 .footer .logos {
-  width: 2rem;
+  width: 1.5rem;
+}
+@media (min-width: 768px) {
+  .footer .logos {
+    width: 1.8rem;
+  }
 }
 .footer__contact-list {
   list-style: none;
@@ -284,20 +289,28 @@ main {
   box-sizing: border-box;
   padding: 0.5rem;
 }
+.footer li h4 {
+  margin: 0.5rem 0;
+}
 .footer li p {
   display: flex;
   align-items: center;
   gap: 1rem;
   flex-direction: column;
+  margin: 0;
 }
 @media (min-width: 768px) {
   .footer li p {
     flex-direction: row;
+    justify-content: center;
   }
 }
-
-.mail-logo {
-  width: 2rem;
+.footer li p a {
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .form {
