@@ -13,6 +13,7 @@ This app started from a group Hackathon project during my schooling in BrainStat
 This app can be used to check whether a movie is worth watching or recommended. And from the start or home page, users are given three top recommended movies to watch which were indivually picked by the hackathon group members.
 
 ### User Profile
+The app is open to anyone interested in exploring and interacting with the content it showcases.
 The app has a home/recommended page which gives visitors the top three recommended movies to watch. The app also has a seach page where visitors can look up if a specific movie is good or bad.
 
 ## Implementation
