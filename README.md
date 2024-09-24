@@ -4,7 +4,7 @@
 # Darvy Yu
 
 # Project Title
-Not My Food
+No Bad Movies
 
 ## Overview
 This app started from a group Hackathon project during my schooling in BrainStation. The goal of the project was to showcase our understanding in Rest Apis by using axios library to make api calls along with developing a functional and visually appealing web application within the given time or 5 hours.
